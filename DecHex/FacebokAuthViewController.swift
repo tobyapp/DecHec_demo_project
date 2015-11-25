@@ -71,10 +71,18 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             // should check if specific permissions missing
             if result.grantedPermissions.contains("email")
             {
-
+               print("got email")
                 facebookData.returnUserData()
-                let pictureData = facebookData.getProfilePicture()
-                print(pictureData)
+//                let pictureData = facebookData.getProfilePicture()
+//                print(pictureData)
+                facebookData.getProfilePicture {(pictureData, error) -> Void in
+                    
+                    if error != nil {
+                        print("login error: \(error!.localizedDescription)")
+                    }
+                    
+                    print(pictureData)
+                }
             }
         }
     }

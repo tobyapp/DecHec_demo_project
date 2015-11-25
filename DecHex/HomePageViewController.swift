@@ -10,10 +10,30 @@ import UIKit
 
 class HomePageViewController: UIViewController {
 
+    var facebookData = FacebookData()
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        facebookData.getProfilePicture {(pictureData, error) -> Void in
+            
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+            }
+            self.imageView.image = UIImage(data: pictureData!)
+        }
+        
+        facebookData.getUserName { (nameData, error) -> Void in
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+            }
+            self.nameLabel.text = "Wellcome \(nameData!)"
+            self.nameLabel.sizeToFit()
+                
+            //self.imageView.image = UIImage(data: pictureData!)
+        }
     }
 
     override func didReceiveMemoryWarning() {

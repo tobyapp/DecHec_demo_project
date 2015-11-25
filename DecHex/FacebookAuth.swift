@@ -24,31 +24,10 @@ class FacebookData {
             {
                 // Process error
                 print("Error    :   \(error)")
-                
             }
             else
             {
                 let json = JSON(result)
-                
-//                //get fb user name
-//                let name = json["name"].stringValue
-//                print("the JSON name is: \(name)")
-//                
-//                //get fb email address
-//                let email = json["email"].stringValue
-//                print("the JSON email is: \(email)")
-//                
-//                //get fb friends total count
-//                let friends = json["friends"]["summary"]["total_count"].stringValue
-//                print("the JSON friends is: \(friends)")
-//                
-//                //get fb pages liked
-//                let likes = json["likes"]["data"]
-//                print("\(likes)")
-                
-//                let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-//                let fbDataStore = NSEntityDescription.insertNewObjectForEntityForName("FbData", inManagedObjectContext: managedObjectContext) as! FbData
-
                 let moc = self.managedObjectContext
                 //Populate core data with fb pages liked
                 for (_, subJson) in json["likes"]["data"] {
@@ -65,11 +44,12 @@ class FacebookData {
         })
     }
     
-    func getProfilePicture() -> NSData?{
-        var response:NSData?
+    func getProfilePicture(completion: (pictureData: NSData?, error: NSError?) -> Void){
         
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            var pictureData: NSData?
             
             if error != nil {
                 print("login error: \(error!.localizedDescription)")
@@ -80,15 +60,28 @@ class FacebookData {
             let profilePicture = json["picture"]["data"]["url"].stringValue
             
             if let url = NSURL(string: profilePicture) {
-                if let pictureData = NSData(contentsOfURL: url){
-                    print("OGT DATATATATAAT")
-                    response = pictureData
-                    //print(response)
-                }
+                pictureData = NSData(contentsOfURL: url)
+            }
+            completion(pictureData: pictureData, error: error)
+        })
+    }
+    
+    func getUserName(completion: (nameData: String?, error: NSError?) -> Void){
+        
+        let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name"])
+        graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
+            
+            //var nameData: String?
+            
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+                return
             }
             
+            let json = JSON(result)
+            let userName = json["name"].stringValue
+            
+            completion(nameData: userName, error: error)
         })
-        //print(response)
-        return response
     }
 }

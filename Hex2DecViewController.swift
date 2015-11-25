@@ -15,20 +15,23 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
     
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var hexInput: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBAction func convertButton(sender: UIButton) {
         convert(hexInput.text!)
+    }
+    @IBAction func warningMessage(sender: AnyObject) {
+        showAlertController()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         dataSession.delegate = self
         dataSession.activateSession()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func convert(input : String) {
@@ -53,7 +56,34 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         dataSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
         //replyhandler set to nil as dont want to recieve reply, same with erorr handler
     }
+    
+    func showAlertController() {
+        let alertController = UIAlertController(
+            title: "test title, hey that they both start with a 'T'",
+            message: "shouldnt have pressed this button...",
+            preferredStyle: .Alert)
+        let cancelAction = UIAlertAction(
+            title: "Ignore",
+            style: UIAlertActionStyle.Destructive,
+            handler: nil)
+        let otherAction = UIAlertAction(
+            title: "Acknowledge (does nothing)",
+            style: UIAlertActionStyle.Default,
+            handler: {action in print("confirm was tapped")})
+        alertController.addAction(cancelAction)
+        alertController.addAction(otherAction)
+        
+        let openAction = UIAlertAction(title: "Open Settings", style: .Default) { (action) in
+            if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
+        alertController.addAction(openAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        print("done with alert controller")
+    }
 
+    
 }
 
 
