@@ -10,7 +10,7 @@
 		24817ED8651FF2740F1888AB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAB4864E3EF58FCDD998B78 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520472021BF29ED200D56292 /* SharedSingleton.swift */; };
 		520472091BF2A63A00D56292 /* WatchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520472081BF2A63A00D56292 /* WatchInterfaceController.swift */; };
-		5226CDBE1C04E4B000A5519A /* FacebookAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDBD1C04E4B000A5519A /* FacebookAuth.swift */; };
+		5226CDBE1C04E4B000A5519A /* FacebookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDBD1C04E4B000A5519A /* FacebookData.swift */; };
 		5226CDC01C0507D000A5519A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5226CDBF1C0507D000A5519A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5226CDC31C0508B600A5519A /* FacebookUserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */; };
 		5226CDC51C050C7300A5519A /* FacebookDataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */; };
@@ -39,6 +39,11 @@
 		52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */; };
 		52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */; };
 		52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */; };
+		52F08D1E1C066D7E00661424 /* backgroundOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D1D1C066D7E00661424 /* backgroundOne.jpg */; };
+		52F08D201C066E6200661424 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F08D1F1C066E6200661424 /* UIViewExtention.swift */; };
+		52F08D241C06723800661424 /* backgroundFour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D211C06723800661424 /* backgroundFour.jpg */; };
+		52F08D251C06723800661424 /* backgroundThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D221C06723800661424 /* backgroundThree.jpg */; };
+		52F08D281C06736C00661424 /* backgroundTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D271C06736C00661424 /* backgroundTwo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,7 +106,7 @@
 		494FA82AAA9BD4EF024C8D29 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		520472021BF29ED200D56292 /* SharedSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSingleton.swift; sourceTree = "<group>"; };
 		520472081BF2A63A00D56292 /* WatchInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchInterfaceController.swift; sourceTree = "<group>"; };
-		5226CDBD1C04E4B000A5519A /* FacebookAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAuth.swift; sourceTree = "<group>"; };
+		5226CDBD1C04E4B000A5519A /* FacebookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookData.swift; sourceTree = "<group>"; };
 		5226CDBF1C0507D000A5519A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5226CDC21C0508B600A5519A /* FacebookUserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookUserData.xcdatamodel; sourceTree = "<group>"; };
 		5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookDataTableViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +144,11 @@
 		52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-60@3x.png"; sourceTree = "<group>"; };
 		52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@3x.png"; sourceTree = "<group>"; };
+		52F08D1D1C066D7E00661424 /* backgroundOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne.jpg; sourceTree = "<group>"; };
+		52F08D1F1C066E6200661424 /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		52F08D211C06723800661424 /* backgroundFour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour.jpg; sourceTree = "<group>"; };
+		52F08D221C06723800661424 /* backgroundThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree.jpg; sourceTree = "<group>"; };
+		52F08D271C06736C00661424 /* backgroundTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo.jpg; sourceTree = "<group>"; };
 		BDAB4864E3EF58FCDD998B78 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F19C5974AA151D5E96B55386 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -232,7 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */,
-				5226CDBD1C04E4B000A5519A /* FacebookAuth.swift */,
+				5226CDBD1C04E4B000A5519A /* FacebookData.swift */,
 				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
 				520472021BF29ED200D56292 /* SharedSingleton.swift */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
@@ -240,6 +250,7 @@
 				5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				523257B41C04A0080074A9F3 /* HomePageViewController.swift */,
+				52F08D1F1C066E6200661424 /* UIViewExtention.swift */,
 				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
 				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
@@ -270,6 +281,10 @@
 		52B4AAAA1BF3DAD600C984E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				52F08D1D1C066D7E00661424 /* backgroundOne.jpg */,
+				52F08D211C06723800661424 /* backgroundFour.jpg */,
+				52F08D221C06723800661424 /* backgroundThree.jpg */,
+				52F08D271C06736C00661424 /* backgroundTwo.jpg */,
 				52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */,
 				52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */,
 				52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */,
@@ -481,13 +496,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */,
+				52F08D1E1C066D7E00661424 /* backgroundOne.jpg in Resources */,
 				52B4AAAC1BF3DB2900C984E6 /* Icon-40@2x.png in Resources */,
+				52F08D281C06736C00661424 /* backgroundTwo.jpg in Resources */,
+				52F08D241C06723800661424 /* backgroundFour.jpg in Resources */,
 				528ADAFE1BBD756A000F0C5E /* Assets.xcassets in Resources */,
 				52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */,
 				528ADAFC1BBD756A000F0C5E /* Main.storyboard in Resources */,
 				52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */,
 				52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */,
 				52B4AAAE1BF3DB3C00C984E6 /* Icon-40@3x.png in Resources */,
+				52F08D251C06723800661424 /* backgroundThree.jpg in Resources */,
 				52B4AAB01BF3DB4000C984E6 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,12 +591,13 @@
 			files = (
 				5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */,
 				5226CDC31C0508B600A5519A /* FacebookUserData.xcdatamodeld in Sources */,
-				5226CDBE1C04E4B000A5519A /* FacebookAuth.swift in Sources */,
+				5226CDBE1C04E4B000A5519A /* FacebookData.swift in Sources */,
 				5226CDCC1C050E3200A5519A /* FbData+CoreDataProperties.swift in Sources */,
 				5226CDC51C050C7300A5519A /* FacebookDataTableViewController.swift in Sources */,
 				523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */,
+				52F08D201C066E6200661424 /* UIViewExtention.swift in Sources */,
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
 				5226CDCD1C050E3200A5519A /* FbData.swift in Sources */,
 				520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */,

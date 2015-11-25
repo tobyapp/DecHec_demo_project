@@ -12,6 +12,7 @@ import WatchConnectivity
 class Hex2DecViewController: UIViewController, WCSessionDelegate{
     var brain = ConverterBrain()
     let dataSession = WCSession.defaultSession()
+    var facebookData = FacebookData()
     
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var hexInput: UITextField!
@@ -26,8 +27,15 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground("backgroundThree.jpg")
         dataSession.delegate = self
-        dataSession.activateSession()
+        dataSession.activateSession() //ready to recieve messages from counterpart (may not be nessassery as not sending messages back)
+        facebookData.getProfilePicture {(pictureData, error) -> Void in
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+            }
+            self.imageView.image = UIImage(data: pictureData!)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,6 +54,7 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         else if let message = convertedNumber.errorMessage {
             print("The answer is \(message)")
             let errorMessage = "\(message)"
+            shake(answerDisplay)
             answerDisplay.text = errorMessage
             sendMessageToWatch(input, convertedHexNumber: errorMessage)
         }
@@ -55,6 +64,17 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         let message = [ "originalNumber": decInput, "newDecNumber": convertedHexNumber, "newHexNumber": ""]
         dataSession.sendMessage(message, replyHandler: nil, errorHandler: nil)
         //replyhandler set to nil as dont want to recieve reply, same with erorr handler
+    }
+    
+    func shake(view: UILabel) {
+        let shakeAnimation = CAKeyframeAnimation()
+        shakeAnimation.keyPath = "position.x"
+        shakeAnimation.values = [0, 10, -10, 10, -5, 5, -5, 0 ]
+        shakeAnimation.keyTimes = [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1]
+        shakeAnimation.duration = 0.5
+        shakeAnimation.additive = true
+        
+        view.layer.addAnimation(shakeAnimation, forKey: "shake")
     }
     
     func showAlertController() {
@@ -82,8 +102,7 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         self.presentViewController(alertController, animated: true, completion: nil)
         print("done with alert controller")
     }
-
-    
+ 
 }
 
 

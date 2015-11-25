@@ -14,9 +14,22 @@ class HomePageViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBAction func backgorundChange(sender: UIPanGestureRecognizer) {
+        
+        let translation = sender.translationInView(self.view)
+        
+        print("Let X : \(translation.x)")
+        print("Let Y : \(translation.y)")
+        
+        
+        view.backgroundColor = UIColor(red: translation.x, green: translation.y, blue: 1, alpha: 1)
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addBackground("backgroundOne.jpg")
+         //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpg")!)
         facebookData.getProfilePicture {(pictureData, error) -> Void in
             
             if error != nil {
@@ -31,25 +44,20 @@ class HomePageViewController: UIViewController {
             }
             self.nameLabel.text = "Wellcome \(nameData!)"
             self.nameLabel.sizeToFit()
-                
-            //self.imageView.image = UIImage(data: pictureData!)
+            
         }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+
+}
+
+extension NSLayoutConstraint {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override public var description: String {
+        let id = identifier ?? ""
+        return "id: \(id), constant: \(constant)" //you may print whatever you want here
     }
-    */
-
 }

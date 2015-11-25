@@ -16,7 +16,6 @@ class FacebookData {
 
     func returnUserData()
     {
-        
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, friends, likes, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -34,9 +33,6 @@ class FacebookData {
                     if let pageLikedName = subJson["name"].string {
                         if let pageLikedDate = subJson["created_time"].string {
                             FbData.createInManagedObjectContext(moc, likeDate: pageLikedDate, pageLiked: pageLikedName)
-                           // print("itemTitle is : \(pageLikedDate)   and    itemText is : \(pageLikedName)")
-
-                        
                         }
                     }
                 }
@@ -70,9 +66,7 @@ class FacebookData {
         
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
-            
-            //var nameData: String?
-            
+
             if error != nil {
                 print("login error: \(error!.localizedDescription)")
                 return

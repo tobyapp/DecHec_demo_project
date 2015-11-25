@@ -16,8 +16,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+        self.view.addBackground("backgroundFour.jpg")
         //load facebook display button
         func displayFBButton(){
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
@@ -25,7 +24,6 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             loginView.center = self.view.center
             loginView.readPermissions = ["public_profile", "email", "user_friends", "user_likes"]
             loginView.delegate = self
-            
             print("accessed displayFBButton()")
         }
         
@@ -47,7 +45,6 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Facebook Delegate Methods
@@ -73,23 +70,11 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             {
                print("got email")
                 facebookData.returnUserData()
-//                let pictureData = facebookData.getProfilePicture()
-//                print(pictureData)
-                facebookData.getProfilePicture {(pictureData, error) -> Void in
-                    
-                    if error != nil {
-                        print("login error: \(error!.localizedDescription)")
-                    }
-                    
-                    print(pictureData)
-                }
             }
         }
     }
     
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
-        //image.removeFromSuperview()  // this removes it from your view hierarchy
-        //image = nil;                 // if your reference to it was a strong reference, make sure to `nil
     }
 }

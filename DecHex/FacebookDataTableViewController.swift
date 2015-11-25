@@ -16,6 +16,7 @@ class FacebookDataTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.view.addBackground()
         fetchData()
     }
 
@@ -41,6 +42,7 @@ class FacebookDataTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) //as UITableViewCell
         let dataItem = pagesLikedData[indexPath.row]
         cell.textLabel!.text = dataItem.pageLiked!
+        cell.backgroundColor = UIColor.clearColor() //use this to change cell colour, look at stackoverflow web site to get idear on how to change them
         return cell
     }
     
@@ -71,11 +73,7 @@ class FacebookDataTableViewController: UITableViewController {
             print("Fetch failed: \(error.localizedDescription)")
         }
     }
-    
-    
-    
-    
-    
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
