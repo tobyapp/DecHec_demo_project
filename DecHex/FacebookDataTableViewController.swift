@@ -18,6 +18,7 @@ class FacebookDataTableViewController: UITableViewController {
         super.viewDidLoad()
         //self.view.addBackground()
         fetchData()
+        tableView.tableFooterView = UIView(frame:CGRectZero)
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,22 +43,33 @@ class FacebookDataTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) //as UITableViewCell
         let dataItem = pagesLikedData[indexPath.row]
         cell.textLabel!.text = dataItem.pageLiked!
-        cell.backgroundColor = UIColor.clearColor() //use this to change cell colour, look at stackoverflow web site to get idear on how to change them
+        let blueColor = (CGFloat(1) / CGFloat(indexPath.row)) * 5
+        let greenColor = CGFloat(1.0)
+        let redColor = CGFloat(1.0)
+        cell.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)   //UIColor(red: 0.0, green: 0.5, blue: blueColor, alpha: 1.0)
+        tableView.separatorColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
+        
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let dataItem = pagesLikedData[indexPath.row]
-        print(dataItem.likeDate!)
+        
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.hidden = false
+        blurEffectView.frame = view.bounds
+        view.addSubview(blurEffectView)
 
         let alertController = UIAlertController(title: dataItem.pageLiked!,
             message: "Liked at: \(dataItem.likeDate!)",
             preferredStyle: .Alert)
         let cancelAction    = UIAlertAction(
             title: "Close",
-            style: UIAlertActionStyle.Destructive,
-            handler: nil)
+            style: UIAlertActionStyle.Destructive)
+            { (action) in
+                blurEffectView.hidden = true }
         alertController.addAction(cancelAction)
         self.presentViewController(alertController, animated: true, completion: nil)
     }
@@ -74,6 +86,7 @@ class FacebookDataTableViewController: UITableViewController {
         }
     }
 
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {

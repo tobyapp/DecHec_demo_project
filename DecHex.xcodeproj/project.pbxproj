@@ -40,7 +40,7 @@
 		52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */; };
 		52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */; };
 		52F08D1E1C066D7E00661424 /* backgroundOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D1D1C066D7E00661424 /* backgroundOne.jpg */; };
-		52F08D201C066E6200661424 /* UIViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F08D1F1C066E6200661424 /* UIViewExtention.swift */; };
+		52F08D201C066E6200661424 /* ClassExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F08D1F1C066E6200661424 /* ClassExtentions.swift */; };
 		52F08D241C06723800661424 /* backgroundFour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D211C06723800661424 /* backgroundFour.jpg */; };
 		52F08D251C06723800661424 /* backgroundThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D221C06723800661424 /* backgroundThree.jpg */; };
 		52F08D281C06736C00661424 /* backgroundTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D271C06736C00661424 /* backgroundTwo.jpg */; };
@@ -145,7 +145,7 @@
 		52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@3x.png"; sourceTree = "<group>"; };
 		52F08D1D1C066D7E00661424 /* backgroundOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne.jpg; sourceTree = "<group>"; };
-		52F08D1F1C066E6200661424 /* UIViewExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtention.swift; sourceTree = "<group>"; };
+		52F08D1F1C066E6200661424 /* ClassExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassExtentions.swift; sourceTree = "<group>"; };
 		52F08D211C06723800661424 /* backgroundFour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour.jpg; sourceTree = "<group>"; };
 		52F08D221C06723800661424 /* backgroundThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree.jpg; sourceTree = "<group>"; };
 		52F08D271C06736C00661424 /* backgroundTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo.jpg; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 				5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				523257B41C04A0080074A9F3 /* HomePageViewController.swift */,
-				52F08D1F1C066E6200661424 /* UIViewExtention.swift */,
+				52F08D1F1C066E6200661424 /* ClassExtentions.swift */,
 				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
 				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
@@ -597,7 +597,7 @@
 				523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */,
-				52F08D201C066E6200661424 /* UIViewExtention.swift in Sources */,
+				52F08D201C066E6200661424 /* ClassExtentions.swift in Sources */,
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
 				5226CDCD1C050E3200A5519A /* FbData.swift in Sources */,
 				520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */,

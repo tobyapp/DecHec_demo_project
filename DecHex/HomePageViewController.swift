@@ -43,8 +43,7 @@ class HomePageViewController: UIViewController {
                 print("login error: \(error!.localizedDescription)")
             }
             self.nameLabel.text = "Wellcome \(nameData!)"
-            self.nameLabel.sizeToFit()
-            
+            self.nameLabel.sizeToFit() 
         }
     }
 
@@ -54,10 +53,3 @@ class HomePageViewController: UIViewController {
 
 }
 
-extension NSLayoutConstraint {
-    
-    override public var description: String {
-        let id = identifier ?? ""
-        return "id: \(id), constant: \(constant)" //you may print whatever you want here
-    }
-}

@@ -93,11 +93,14 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         alertController.addAction(cancelAction)
         alertController.addAction(otherAction)
         
-        let openAction = UIAlertAction(title: "Open Settings", style: .Default) { (action) in
-            if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
+        let openAction = UIAlertAction(
+            title: "Open Settings",
+            style: .Default)
+            { (action) in
+                if let url = NSURL(string:UIApplicationOpenSettingsURLString) {
                 UIApplication.sharedApplication().openURL(url)
+                }
             }
-        }
         alertController.addAction(openAction)
         self.presentViewController(alertController, animated: true, completion: nil)
         print("done with alert controller")

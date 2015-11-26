@@ -21,5 +21,31 @@ extension UIView {
         imageViewBackground.contentMode = UIViewContentMode.ScaleToFill
         
         self.addSubview(imageViewBackground)
-        self.sendSubviewToBack(imageViewBackground)
-    }}
+        self.sendSubviewToBack(imageViewBackground) 
+    }
+}
+
+extension NSLayoutConstraint {
+    
+    override public var description: String {
+        let id = identifier ?? ""
+        return "id: \(id), constant: \(constant)"
+    }
+}
+
+//extension UITableViewCell {
+//    override public func layoutSubviews() {
+//        super.layoutSubviews()
+//        reload()
+//    }
+//    func reload() {
+//        if selected {
+//            contentView.backgroundColor = UIColor.redColor()
+//            label_checkmark.hidden = false
+//        }
+//        else {
+//            contentView.backgroundColor = UIColor.whiteColor()
+//            label_checkmark.hidden = true
+//        }
+//    }
+//}
