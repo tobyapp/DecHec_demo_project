@@ -9,3 +9,5 @@ pod 'FBSDKShareKit'
 use_frameworks!
 
 pod 'SwiftyJSON'
+
+pod 'SWRevealViewController'

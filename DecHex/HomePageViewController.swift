@@ -21,8 +21,8 @@ class HomePageViewController: UIViewController {
         print("Let X : \(translation.x)")
         print("Let Y : \(translation.y)")
         
-        
-        view.backgroundColor = UIColor(red: translation.x, green: translation.y, blue: 1, alpha: 1)
+//        
+//        view.backgroundColor = UIColor(red: translation.x, green: translation.y, blue: 1, alpha: 1)
     }
     
     

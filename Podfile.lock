@@ -19,12 +19,14 @@ PODS:
   - FBSDKShareKit (4.8.0):
     - FBSDKCoreKit
   - SwiftyJSON (2.3.1)
+  - SWRevealViewController (2.3.0)
 
 DEPENDENCIES:
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
   - SwiftyJSON
+  - SWRevealViewController
 
 SPEC CHECKSUMS:
   Bolts: 722ab9a4f8b50fc4ed1b9998a5a7a2b3f16d80b4
@@ -32,5 +34,6 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: d893fcbb98d854496925e9ff73c67b896982d3c4
   FBSDKShareKit: e7577ee3adf80fc04fb656dd133fbb522250672b
   SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  SWRevealViewController: 6d3fd97f70112fd7cef9de14df4260eacce4c63a
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

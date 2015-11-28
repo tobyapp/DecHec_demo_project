@@ -29,6 +29,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SWRevealViewController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +42,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08DD4DD93D1BDD3501D1FC222EFEAA29</key>
+		<key>57ADC05E440A960212657DE6DA1FEDD5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60E913EE8D9E3814ED98B3DB0CD41E6B</key>
+		<key>5D69761C2CD2A1E5C013537B29CAB4CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7002D4AB57C58B585F49A7B63062C1CB</key>
+		<key>6705ED866216A76CFBC966EF6404A373</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B9A04D3C9B208813656510FDA8ADAE02</key>
+		<key>A80FBA0CD76AF905188EEA5802AFCCF0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BCD2EF8A6552D831E6CE664A4D82ACC5</key>
+		<key>D8470470292BC39EE263E6103508E41A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7FA2B69F13E8E78B976E671CD46C099</key>
+		<key>E99C7CBC1F4CA0EC96C1D1B88467366D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F5ACF367AE3BD7A7F2AF2D430901DF7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

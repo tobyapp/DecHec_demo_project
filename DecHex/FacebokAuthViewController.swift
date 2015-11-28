@@ -40,6 +40,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             //not logged in yet, present button for user to log in
             displayFBButton()
             print("logging in")
+            
         }
     }
     
