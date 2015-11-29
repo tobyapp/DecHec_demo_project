@@ -42,7 +42,7 @@ class ProfileViewController: UIViewController {
             if error != nil {
                 print("login error: \(error!.localizedDescription)")
             }
-            self.nameLabel.text = "Wellcome \(nameData!)"
+            self.nameLabel.text = "\(nameData!)"
             self.nameLabel.sizeToFit()
         }
     }

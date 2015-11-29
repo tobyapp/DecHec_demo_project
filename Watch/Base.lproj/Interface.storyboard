@@ -10,11 +10,11 @@
             <objects>
                 <controller identifier="WatchTest" backgroundImage="backgroundFive" id="JEZ-WZ-Xp2" customClass="WatchInterfaceController" customModule="Watch_Extension">
                     <items>
-                        <label width="136" alignment="left" text="Original number" textAlignment="center" id="uVT-Az-hPs">
+                        <label width="136" alignment="left" text="DecHexConverter" textAlignment="center" id="LZS-ia-jtU">
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <variation key="device=watch42mm" width="156"/>
                         </label>
-                        <label width="136" alignment="left" text="DecHexConverter" textAlignment="center" id="LZS-ia-jtU">
+                        <label width="136" alignment="left" text="Original number" textAlignment="center" id="uVT-Az-hPs">
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <variation key="device=watch42mm" width="156"/>
                         </label>

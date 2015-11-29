@@ -68,6 +68,8 @@ class FacebookData {
 
             if error != nil {
                 print("login error: \(error!.localizedDescription)")
+                let userName = "Error, need to log in"
+                completion(nameData: userName, error: error)
                 return
             }
             
