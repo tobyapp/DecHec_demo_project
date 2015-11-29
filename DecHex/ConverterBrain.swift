@@ -9,7 +9,6 @@
 import Foundation
 
 class ConverterBrain {
-    var memory = SharedSingleton()
     
     func hexToDec(hexNumber : String) -> (result: Int?, errorMessage: String?) {
         

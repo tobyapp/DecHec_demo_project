@@ -5,28 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Facebok Auth View Controller-->
-        <scene sceneID="Eaj-6k-kn9">
-            <objects>
-                <viewController id="dsO-M5-dOA" customClass="FacebokAuthViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="FOZ-WS-NqH"/>
-                        <viewControllerLayoutGuide type="bottom" id="mkR-TI-JRl"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wJm-1z-M6X">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="showPage" id="g1k-eD-kv3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6JM-4j-12X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1565" y="-3162"/>
-        </scene>
         <!--revealVC-->
         <scene sceneID="v65-nk-Qce">
             <objects>
@@ -888,12 +866,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login to use app! (Demo)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-Xd-5Uv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to use app! (Demo)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-Xd-5Uv">
                                 <rect key="frame" x="182" y="113" width="237" height="21"/>
                                 <animations/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="86G-7G-n8c"/>
                                     <constraint firstAttribute="width" constant="237" id="IRf-72-swa"/>
-                                    <constraint firstAttribute="width" constant="237" id="a3E-A4-A79"/>
+                                    <constraint firstAttribute="width" constant="237" id="O7f-xn-uZS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -906,11 +885,10 @@
                                 <variation key="heightClass=compact">
                                     <mask key="constraints">
                                         <include reference="IRf-72-swa"/>
-                                        <exclude reference="a3E-A4-A79"/>
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-j3-lM1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuv-j3-lM1">
                                 <rect key="frame" x="277" y="55" width="46" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Button"/>
@@ -919,11 +897,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="qRG-Xd-5Uv" firstAttribute="centerX" secondItem="b8G-CY-DGb" secondAttribute="centerX" id="7eq-0E-HbK"/>
-                            <constraint firstItem="qRG-Xd-5Uv" firstAttribute="top" secondItem="vKU-CJ-lCQ" secondAttribute="bottom" constant="49" id="9rj-Ua-JhY"/>
+                            <constraint firstItem="qRG-Xd-5Uv" firstAttribute="top" secondItem="Tuv-j3-lM1" secondAttribute="bottom" constant="28" id="Dae-yh-Rk5"/>
                             <constraint firstItem="qRG-Xd-5Uv" firstAttribute="top" secondItem="vKU-CJ-lCQ" secondAttribute="bottom" constant="49" id="e0D-T7-X7F"/>
                             <constraint firstItem="qRG-Xd-5Uv" firstAttribute="centerX" secondItem="b8G-CY-DGb" secondAttribute="centerX" id="l16-c5-pht"/>
-                            <constraint firstItem="ace-Rs-icS" firstAttribute="top" secondItem="qRG-Xd-5Uv" secondAttribute="bottom" constant="466" id="nCy-zM-ao7"/>
+                            <constraint firstItem="ace-Rs-icS" firstAttribute="top" secondItem="qRG-Xd-5Uv" secondAttribute="bottom" constant="466" id="nKT-Ge-dLj"/>
+                            <constraint firstItem="qRG-Xd-5Uv" firstAttribute="centerX" secondItem="b8G-CY-DGb" secondAttribute="centerX" id="xKV-2O-kxY"/>
+                            <constraint firstItem="qRG-Xd-5Uv" firstAttribute="centerX" secondItem="Tuv-j3-lM1" secondAttribute="centerX" id="xKp-6Z-fSa"/>
                             <constraint firstItem="ace-Rs-icS" firstAttribute="top" secondItem="qRG-Xd-5Uv" secondAttribute="bottom" constant="266" id="xQN-4V-P9S"/>
                         </constraints>
                         <variation key="default">
@@ -935,11 +914,8 @@
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="7eq-0E-HbK"/>
-                                <exclude reference="9rj-Ua-JhY"/>
                                 <include reference="e0D-T7-X7F"/>
                                 <include reference="l16-c5-pht"/>
-                                <exclude reference="nCy-zM-ao7"/>
                                 <include reference="xQN-4V-P9S"/>
                             </mask>
                         </variation>
@@ -1036,6 +1012,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="E0Z-Bu-903"/>
-        <segue reference="g1k-eD-kv3"/>
     </inferredMetricsTieBreakers>
 </document>

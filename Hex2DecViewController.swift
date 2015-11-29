@@ -48,6 +48,7 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
             }
             self.imageView.image = UIImage(data: pictureData!)
         }
+        answerDisplay.textColor = UIColor.blackColor()
     }
     
     override func didReceiveMemoryWarning() {

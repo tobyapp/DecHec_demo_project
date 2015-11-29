@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		24817ED8651FF2740F1888AB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAB4864E3EF58FCDD998B78 /* Pods.framework */; };
-		520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520472021BF29ED200D56292 /* SharedSingleton.swift */; };
 		520472091BF2A63A00D56292 /* WatchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520472081BF2A63A00D56292 /* WatchInterfaceController.swift */; };
 		5226CDBE1C04E4B000A5519A /* FacebookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDBD1C04E4B000A5519A /* FacebookData.swift */; };
 		5226CDC01C0507D000A5519A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5226CDBF1C0507D000A5519A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -106,7 +105,6 @@
 
 /* Begin PBXFileReference section */
 		494FA82AAA9BD4EF024C8D29 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		520472021BF29ED200D56292 /* SharedSingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSingleton.swift; sourceTree = "<group>"; };
 		520472081BF2A63A00D56292 /* WatchInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchInterfaceController.swift; sourceTree = "<group>"; };
 		5226CDBD1C04E4B000A5519A /* FacebookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookData.swift; sourceTree = "<group>"; };
 		5226CDBF1C0507D000A5519A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -248,7 +246,6 @@
 				523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */,
 				5226CDBD1C04E4B000A5519A /* FacebookData.swift */,
 				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
-				520472021BF29ED200D56292 /* SharedSingleton.swift */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
 				5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */,
 				5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */,
@@ -608,7 +605,6 @@
 				528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */,
 				5226CDCD1C050E3200A5519A /* FbData.swift in Sources */,
 				52F3A79C1C0A3854009CD967 /* ProfileViewController.swift in Sources */,
-				520472031BF29ED200D56292 /* SharedSingleton.swift in Sources */,
 				528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
