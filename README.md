@@ -23,6 +23,6 @@ This Application connects to Facebook (using separate supplied credentials) thro
 6. Apple Push Certificates: An Apple Push Certificate will be obtained to allow Apple Push Notifications
 
 ### Warnings:
--Various warning messages with regards to used frameworks: Solutions for these were researched but could not be found, these will be looked at and fixed in the future
--Assets.xcassets: Adequate AppIcons will be created in the future to replace the existing used ones to resolve warning messages
--Main.storyboard: The frame for “Name Label” will be updated to resolve warning
+- Various warning messages with regards to used frameworks: Solutions for these were researched but could not be found, these will be looked at and fixed in the future
+- Assets.xcassets: Adequate AppIcons will be created in the future to replace the existing used ones to resolve warning messages
+- Main.storyboard: The frame for “Name Label” will be updated to resolve warning
