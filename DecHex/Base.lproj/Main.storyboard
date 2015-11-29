@@ -208,7 +208,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hhX-TP-1um" id="BvV-0i-yif">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R5m-aV-JKf">
@@ -230,7 +230,7 @@
                                         <rect key="frame" x="0.0" y="44" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bCe-QF-WhU" id="UBj-3v-ZNY">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="mtc-uS-COe">
@@ -258,7 +258,7 @@
                                         <rect key="frame" x="0.0" y="88" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FvE-Wn-2ft" id="m70-n2-wc9">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="2qx-fQ-QQR">
@@ -286,7 +286,7 @@
                                         <rect key="frame" x="0.0" y="132" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JaE-VC-qFt" id="10p-48-Ab3">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hex" translatesAutoresizingMaskIntoConstraints="NO" id="Onj-9f-2dY">
@@ -300,6 +300,9 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="51" y="11" width="71" height="22"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -314,20 +317,23 @@
                                         <rect key="frame" x="0.0" y="176" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="phX-UP-zF8" id="pBA-I3-XSg">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dec" translatesAutoresizingMaskIntoConstraints="NO" id="NCi-Q5-elT">
                                                     <rect key="frame" x="8" y="4" width="35" height="35"/>
                                                     <animations/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dec2Hex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYE-vy-5xC">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deci2Hex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYE-vy-5xC">
                                                     <rect key="frame" x="51" y="11" width="71" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                     <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="51" y="11" width="74" height="22"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <animations/>
@@ -342,7 +348,7 @@
                                         <rect key="frame" x="0.0" y="220" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4wO-wU-l5f" id="ghU-HZ-WC4">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="facebook" translatesAutoresizingMaskIntoConstraints="NO" id="kVa-pn-yqi">
@@ -379,7 +385,7 @@
             </objects>
             <point key="canvasLocation" x="-1033" y="-1053"/>
         </scene>
-        <!--Decimal to Hexidecimal-->
+        <!--Decimal to Hexadecimal-->
         <scene sceneID="SQA-sM-Wl8">
             <objects>
                 <viewController id="xva-yL-Zn6" customClass="Dec2HexViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
@@ -552,7 +558,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Decimal to Hexidecimal" id="3qA-IH-RAr">
+                    <navigationItem key="navigationItem" title="Decimal to Hexadecimal" id="3qA-IH-RAr">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="9jI-7p-fjr"/>
                     </navigationItem>
                     <connections>
@@ -566,7 +572,7 @@
             </objects>
             <point key="canvasLocation" x="627" y="-1053"/>
         </scene>
-        <!--Hexidecimal to Decimal-->
+        <!--Hexadecimal to Decimal-->
         <scene sceneID="lf2-2J-htt">
             <objects>
                 <viewController id="EU9-T9-68N" customClass="Hex2DecViewController" customModule="DecHex" customModuleProvider="target" sceneMemberID="viewController">
@@ -578,18 +584,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Hexidecimal number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-o8-Yco">
-                                <rect key="frame" x="58" y="237" width="485" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8ci-7H-Jvf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go"/>
-                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="58" y="69" width="685" height="30"/>
-                                </variation>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c5Y-8N-6A9">
                                 <rect key="frame" x="272" y="166" width="57" height="21"/>
                                 <animations/>
@@ -630,6 +624,19 @@
                                     <action selector="warningMessage:" destination="EU9-T9-68N" eventType="touchUpInside" id="HgF-aU-apC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
+                                <rect key="frame" x="270" y="316" width="59" height="62"/>
+                                <animations/>
+                                <state key="normal" title="Convert!">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="370" y="148" width="59" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="convertButton:" destination="EU9-T9-68N" eventType="touchUpInside" id="LKl-3B-QM6"/>
+                                </connections>
+                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HQX-bb-1Tf">
                                 <rect key="frame" x="20" y="64" width="100" height="100"/>
                                 <animations/>
@@ -648,19 +655,18 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlC-7P-T5K">
-                                <rect key="frame" x="270" y="316" width="59" height="62"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input Hexidecimal number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9y-o8-Yco">
+                                <rect key="frame" x="58" y="237" width="485" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Convert!">
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8ci-7H-Jvf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="go"/>
                                 <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="370" y="148" width="59" height="30"/>
+                                    <rect key="frame" x="58" y="69" width="685" height="30"/>
                                 </variation>
-                                <connections>
-                                    <action selector="convertButton:" destination="EU9-T9-68N" eventType="touchUpInside" id="LKl-3B-QM6"/>
-                                </connections>
-                            </button>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -681,6 +687,7 @@
                             <constraint firstItem="c5Y-8N-6A9" firstAttribute="centerX" secondItem="Q9y-o8-Yco" secondAttribute="centerX" id="j1Q-S0-D4o"/>
                             <constraint firstItem="MlC-7P-T5K" firstAttribute="centerX" secondItem="NhE-7C-Gul" secondAttribute="centerX" id="j28-pw-0Np"/>
                             <constraint firstItem="HQX-bb-1Tf" firstAttribute="leading" secondItem="S1i-wg-hHS" secondAttribute="leadingMargin" id="lIh-Pl-ExO"/>
+                            <constraint firstItem="Q9y-o8-Yco" firstAttribute="centerX" secondItem="S1i-wg-hHS" secondAttribute="centerX" id="lMc-hl-gjq"/>
                             <constraint firstItem="MlC-7P-T5K" firstAttribute="centerX" secondItem="S1i-wg-hHS" secondAttribute="centerX" id="n9Y-Tf-Lgb"/>
                             <constraint firstItem="MlC-7P-T5K" firstAttribute="trailing" secondItem="c5Y-8N-6A9" secondAttribute="trailing" id="orx-IU-DYb"/>
                             <constraint firstItem="Q9y-o8-Yco" firstAttribute="top" secondItem="HQX-bb-1Tf" secondAttribute="bottom" constant="73" id="pST-Mw-6fL"/>
@@ -695,11 +702,12 @@
                             <mask key="constraints">
                                 <exclude reference="7Ar-bo-tGW"/>
                                 <exclude reference="ICC-Nv-38O"/>
-                                <exclude reference="JOc-bF-fRk"/>
-                                <exclude reference="NXM-HI-Obg"/>
-                                <exclude reference="saG-DY-vqe"/>
                                 <exclude reference="gfI-z4-25T"/>
                                 <exclude reference="j1Q-S0-D4o"/>
+                                <exclude reference="JOc-bF-fRk"/>
+                                <exclude reference="NXM-HI-Obg"/>
+                                <exclude reference="lMc-hl-gjq"/>
+                                <exclude reference="saG-DY-vqe"/>
                                 <exclude reference="GgR-e4-grJ"/>
                                 <exclude reference="VN4-hl-nPi"/>
                                 <exclude reference="j28-pw-0Np"/>
@@ -711,11 +719,11 @@
                             <mask key="constraints">
                                 <include reference="7Ar-bo-tGW"/>
                                 <include reference="ICC-Nv-38O"/>
+                                <include reference="gfI-z4-25T"/>
+                                <include reference="j1Q-S0-D4o"/>
                                 <include reference="JOc-bF-fRk"/>
                                 <include reference="NXM-HI-Obg"/>
                                 <include reference="saG-DY-vqe"/>
-                                <include reference="gfI-z4-25T"/>
-                                <include reference="j1Q-S0-D4o"/>
                                 <include reference="GgR-e4-grJ"/>
                                 <include reference="VN4-hl-nPi"/>
                                 <include reference="j28-pw-0Np"/>
@@ -723,8 +731,13 @@
                                 <include reference="gqR-DU-ogS"/>
                             </mask>
                         </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="lMc-hl-gjq"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Hexidecimal to Decimal" id="sy3-HV-uVU">
+                    <navigationItem key="navigationItem" title="Hexadecimal to Decimal" id="sy3-HV-uVU">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="QhF-Be-3Fh"/>
                     </navigationItem>
                     <connections>
@@ -786,7 +799,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fbP-UD-zug" id="tTi-CZ-wBx">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </tableViewCellContentView>
