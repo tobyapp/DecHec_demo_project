@@ -1,2 +1,3 @@
 # DecHex_demo_project
-demo project to test different iOS functionality 
+The purpese of this demo project is to test different iOS functionality
+
