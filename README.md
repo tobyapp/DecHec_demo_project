@@ -1,6 +1,15 @@
 # DecHex_demo_project
 The purpose of this demo project is to test and use different iOS functionality, most notably (in no particular order):
-  -CoreData  -FBSDK (Facebook SDK)  -SwiftyJSON  -SWRevealViewController  -WatchKit  -WatchConnectivity Framework  -CocoaPods  -Class Extensions  -AlertControllers  -Plus various other UI elements
+- CoreData
+- FBSDK (Facebook SDK)
+- SwiftyJSON
+- SWRevealViewController
+- WatchKit
+- WatchConnectivity Framework
+- CocoaPods
+- Class Extensions
+- AlertControllers
+- Plus various other UI elements
 
 ## Usage:
 This Application connects to Facebook (using supplied credentials) which then using Facebook’s GraphAPI makes a request for various information from a users Facebook profile (such as the users liked pages). The application then displays these in a table view for the user to select while other profile information is used in other parts of the application. The user can then convert hexadecimal values to decimal values (and vice versa) with the results displayed on the paired Apple watch.
