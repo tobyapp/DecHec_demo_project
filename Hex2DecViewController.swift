@@ -2,9 +2,9 @@
 //  Hex2DecViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 01/10/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  A view controller for the Hexadecimal to Decimal view
 
 import UIKit
 import WatchConnectivity

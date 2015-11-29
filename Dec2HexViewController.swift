@@ -2,9 +2,9 @@
 //  Dec2HexViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 04/10/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  A view controller for the Decimal to Hexadecimal view
 
 import UIKit
 import WatchConnectivity
@@ -13,9 +13,7 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
     var brain = ConverterBrain()
     let dataSession = WCSession.defaultSession()
     var facebookData = FacebookData()
-    
-    
-    
+
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var answerDisplay: UILabel!

@@ -2,9 +2,9 @@
 //  AppDelegate.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 01/10/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+// AppDelegate for the application
 
 import UIKit
 import CoreData

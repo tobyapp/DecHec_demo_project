@@ -2,9 +2,9 @@
 //  ConverterBrain.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 01/10/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  The 'brain' of the conversion between Decimal and Hexadecimal (and vice versa)
 
 import Foundation
 

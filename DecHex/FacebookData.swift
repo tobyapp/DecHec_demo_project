@@ -2,9 +2,9 @@
 //  FacebookAuth.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 24/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  Class for retrieving various data form user's Facebook profile and storing it in CoreData object (FbData)
 
 import Foundation
 import SwiftyJSON
@@ -21,7 +21,6 @@ class FacebookData {
             
             if ((error) != nil)
             {
-                // Process error
                 print("Error    :   \(error)")
             }
             else

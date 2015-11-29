@@ -2,9 +2,9 @@
 //  MenuTableViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 28/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  Just a simple UITableViewController for the sidebar menu, can add extra functionality to this class
 
 import UIKit
 
@@ -12,7 +12,8 @@ class MenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.backgroundView = UIImageView(image: UIImage(named: "backgroundSix.JPG"))
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

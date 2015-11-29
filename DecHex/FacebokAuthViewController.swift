@@ -2,9 +2,9 @@
 //  FacebokAuthViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 24/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  View controller for the login view, this class displays the Facebook log in and log out button and handles various properties with regards to this
 
 import UIKit
 import FBSDKLoginKit
@@ -14,16 +14,15 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     var facebookData = FacebookData()
 
-    
-//    @IBOutlet weak var menuButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        if self.revealViewController() != nil {
-//            menuButton.target = self.revealViewController()
-//            menuButton.action = "revealToggle:"
-//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-//        }
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         
         self.view.addBackground("backgroundFour.jpg")
         //load facebook display button
@@ -42,12 +41,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             displayFBButton()
             print("already logged in")
             facebookData.returnUserData()
-            self.performSegueWithIdentifier("showPage", sender: nil)
-            
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = storyboard.instantiateViewControllerWithIdentifier("revealVC") 
-//            var rvc:SWRevealViewController = self.revealViewController() as SWRevealViewController
-//            rvc.pushFrontViewController(vc, animated: true)
+//            self.performSegueWithIdentifier("showPage", sender: nil)
  
         }
         else
@@ -68,7 +62,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         print("User Logged In") //segue to new view
         facebookData.returnUserData()
-        self.performSegueWithIdentifier("showPage", sender: nil) //segue once logged into facebook
+//        self.performSegueWithIdentifier("showPage", sender: nil) //segue once logged into facebook
         
         if ((error) != nil)
         {
@@ -80,13 +74,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("cancelled")
         }
         else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
-            if result.grantedPermissions.contains("email")
-            {
-               print("got email")
-                facebookData.returnUserData()
-            }
+            facebookData.returnUserData()
         }
     }
     

@@ -2,10 +2,9 @@
 //  Bridging-Header.h
 //  DecHex
 //
-//  Created by Toby Applegate on 24/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
-
+// Bridging header to handle the frameworks written in Objective-C
 
 #ifndef Bridging_Header_h
 #define Bridging_Header_h

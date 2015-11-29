@@ -2,20 +2,23 @@
 //  ProfileViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 28/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  View controller class for the Profile View view controller
 
 import UIKit
 
 class ProfileViewController: UIViewController {
 
+    var facebookData = FacebookData()
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.addBackground("backgroundOne.jpg")
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
@@ -27,9 +30,21 @@ class ProfileViewController: UIViewController {
             self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
         }
         
+        facebookData.getProfilePicture {(pictureData, error) -> Void in
+            
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+            }
+            self.imageView.image = UIImage(data: pictureData!)
+        }
         
-
-        // Do any additional setup after loading the view.
+        facebookData.getUserName { (nameData, error) -> Void in
+            if error != nil {
+                print("login error: \(error!.localizedDescription)")
+            }
+            self.nameLabel.text = "Wellcome \(nameData!)"
+            self.nameLabel.sizeToFit()
+        }
     }
 
     override func didReceiveMemoryWarning() {

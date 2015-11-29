@@ -2,7 +2,6 @@
 //  ExtensionDelegate.swift
 //  Watch Extension
 //
-//  Created by Toby Applegate on 10/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
 

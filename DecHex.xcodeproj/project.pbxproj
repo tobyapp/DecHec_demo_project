@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24817ED8651FF2740F1888AB /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAB4864E3EF58FCDD998B78 /* Pods.framework */; };
 		520472091BF2A63A00D56292 /* WatchInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520472081BF2A63A00D56292 /* WatchInterfaceController.swift */; };
+		520BB4781C0B463400BFDE34 /* backgroundOne.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 520BB4771C0B463400BFDE34 /* backgroundOne.JPG */; };
 		5226CDBE1C04E4B000A5519A /* FacebookData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDBD1C04E4B000A5519A /* FacebookData.swift */; };
 		5226CDC01C0507D000A5519A /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5226CDBF1C0507D000A5519A /* CoreData.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		5226CDC31C0508B600A5519A /* FacebookUserData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */; };
@@ -16,7 +17,6 @@
 		5226CDCC1C050E3200A5519A /* FbData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDCA1C050E3200A5519A /* FbData+CoreDataProperties.swift */; };
 		5226CDCD1C050E3200A5519A /* FbData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5226CDCB1C050E3200A5519A /* FbData.swift */; };
 		523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */; };
-		523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523257B41C04A0080074A9F3 /* HomePageViewController.swift */; };
 		52330DA31BF27F4B00DA26AB /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52330DA11BF27F4B00DA26AB /* Interface.storyboard */; };
 		52330DA51BF27F4B00DA26AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52330DA41BF27F4B00DA26AB /* Assets.xcassets */; };
 		52330DAC1BF27F4B00DA26AB /* Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 52330DAB1BF27F4B00DA26AB /* Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -32,17 +32,22 @@
 		528ADB291BBD7DF1000F0C5E /* Hex2DecViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */; };
 		528ADB2D1BBD8459000F0C5E /* ConverterBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */; };
 		5292B73A1BC1863100781A85 /* Dec2HexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5292B7391BC1863100781A85 /* Dec2HexViewController.swift */; };
+		52B45F2C1C0B274100C5B004 /* backgroundSix.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F291C0B274100C5B004 /* backgroundSix.JPG */; };
+		52B45F2D1C0B274100C5B004 /* backgroundThree.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F2A1C0B274100C5B004 /* backgroundThree.JPG */; };
+		52B45F2E1C0B274100C5B004 /* backgroundTwo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F2B1C0B274100C5B004 /* backgroundTwo.JPG */; };
+		52B45F311C0B274700C5B004 /* backgroundFive.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */; };
+		52B45F321C0B274700C5B004 /* backgroundFour.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F301C0B274700C5B004 /* backgroundFour.JPG */; };
 		52B4AAAC1BF3DB2900C984E6 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */; };
 		52B4AAAE1BF3DB3C00C984E6 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */; };
 		52B4AAB01BF3DB4000C984E6 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */; };
 		52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */; };
 		52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */; };
 		52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */; };
-		52F08D1E1C066D7E00661424 /* backgroundOne.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D1D1C066D7E00661424 /* backgroundOne.jpg */; };
+		52F08D1E1C066D7E00661424 /* backgroundOne1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */; };
 		52F08D201C066E6200661424 /* ClassExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F08D1F1C066E6200661424 /* ClassExtentions.swift */; };
-		52F08D241C06723800661424 /* backgroundFour.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D211C06723800661424 /* backgroundFour.jpg */; };
-		52F08D251C06723800661424 /* backgroundThree.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D221C06723800661424 /* backgroundThree.jpg */; };
-		52F08D281C06736C00661424 /* backgroundTwo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D271C06736C00661424 /* backgroundTwo.jpg */; };
+		52F08D241C06723800661424 /* backgroundFour1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D211C06723800661424 /* backgroundFour1.jpg */; };
+		52F08D251C06723800661424 /* backgroundThree1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D221C06723800661424 /* backgroundThree1.jpg */; };
+		52F08D281C06736C00661424 /* backgroundTwo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D271C06736C00661424 /* backgroundTwo1.jpg */; };
 		52F3A7991C0A3660009CD967 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A7981C0A3660009CD967 /* MenuTableViewController.swift */; };
 		52F3A79C1C0A3854009CD967 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A79B1C0A3854009CD967 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -106,6 +111,7 @@
 /* Begin PBXFileReference section */
 		494FA82AAA9BD4EF024C8D29 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		520472081BF2A63A00D56292 /* WatchInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchInterfaceController.swift; sourceTree = "<group>"; };
+		520BB4771C0B463400BFDE34 /* backgroundOne.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne.JPG; sourceTree = "<group>"; };
 		5226CDBD1C04E4B000A5519A /* FacebookData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookData.swift; sourceTree = "<group>"; };
 		5226CDBF1C0507D000A5519A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		5226CDC21C0508B600A5519A /* FacebookUserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookUserData.xcdatamodel; sourceTree = "<group>"; };
@@ -114,7 +120,6 @@
 		5226CDCB1C050E3200A5519A /* FbData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbData.swift; sourceTree = "<group>"; };
 		523257B11C0492AB0074A9F3 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "DecHex/Bridging-Header.h"; sourceTree = "<group>"; };
 		523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebokAuthViewController.swift; sourceTree = "<group>"; };
-		523257B41C04A0080074A9F3 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		52330D9F1BF27F4B00DA26AB /* Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Watch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52330DA21BF27F4B00DA26AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		52330DA41BF27F4B00DA26AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -138,17 +143,22 @@
 		528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Hex2DecViewController.swift; path = ../Hex2DecViewController.swift; sourceTree = "<group>"; };
 		528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterBrain.swift; sourceTree = "<group>"; };
 		5292B7391BC1863100781A85 /* Dec2HexViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dec2HexViewController.swift; path = ../Dec2HexViewController.swift; sourceTree = "<group>"; };
+		52B45F291C0B274100C5B004 /* backgroundSix.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundSix.JPG; sourceTree = "<group>"; };
+		52B45F2A1C0B274100C5B004 /* backgroundThree.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree.JPG; sourceTree = "<group>"; };
+		52B45F2B1C0B274100C5B004 /* backgroundTwo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo.JPG; sourceTree = "<group>"; };
+		52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFive.JPG; sourceTree = "<group>"; };
+		52B45F301C0B274700C5B004 /* backgroundFour.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour.JPG; sourceTree = "<group>"; };
 		52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-40@2x.png"; sourceTree = "<group>"; };
 		52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-40@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-40@3x.png"; sourceTree = "<group>"; };
 		52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-60@2x.png"; sourceTree = "<group>"; };
 		52B4AAB11BF3DB4400C984E6 /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-60@3x.png"; sourceTree = "<group>"; };
 		52B4AAB31BF3DB4700C984E6 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@2x.png"; sourceTree = "<group>"; };
 		52B4AAB51BF3DB4A00C984E6 /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@3x.png"; path = "Assets.xcassets/AppIcon.appiconset/Icon-Small@3x.png"; sourceTree = "<group>"; };
-		52F08D1D1C066D7E00661424 /* backgroundOne.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne.jpg; sourceTree = "<group>"; };
+		52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne1.jpg; sourceTree = "<group>"; };
 		52F08D1F1C066E6200661424 /* ClassExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassExtentions.swift; sourceTree = "<group>"; };
-		52F08D211C06723800661424 /* backgroundFour.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour.jpg; sourceTree = "<group>"; };
-		52F08D221C06723800661424 /* backgroundThree.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree.jpg; sourceTree = "<group>"; };
-		52F08D271C06736C00661424 /* backgroundTwo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo.jpg; sourceTree = "<group>"; };
+		52F08D211C06723800661424 /* backgroundFour1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour1.jpg; sourceTree = "<group>"; };
+		52F08D221C06723800661424 /* backgroundThree1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree1.jpg; sourceTree = "<group>"; };
+		52F08D271C06736C00661424 /* backgroundTwo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo1.jpg; sourceTree = "<group>"; };
 		52F3A7981C0A3660009CD967 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		52F3A79B1C0A3854009CD967 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BDAB4864E3EF58FCDD998B78 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,19 +253,14 @@
 		528ADAF51BBD756A000F0C5E /* DecHex */ = {
 			isa = PBXGroup;
 			children = (
-				523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */,
-				5226CDBD1C04E4B000A5519A /* FacebookData.swift */,
-				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
+				52B45F231C0B1CD800C5B004 /* converterFiles */,
+				52B45F241C0B1D2C00C5B004 /* facebook */,
 				528ADAF61BBD756A000F0C5E /* AppDelegate.swift */,
-				5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */,
 				5226CDC11C0508B600A5519A /* FacebookUserData.xcdatamodeld */,
 				528ADAFA1BBD756A000F0C5E /* Main.storyboard */,
 				52F3A79B1C0A3854009CD967 /* ProfileViewController.swift */,
 				52F3A7981C0A3660009CD967 /* MenuTableViewController.swift */,
-				523257B41C04A0080074A9F3 /* HomePageViewController.swift */,
 				52F08D1F1C066E6200661424 /* ClassExtentions.swift */,
-				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
-				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
 				528ADAFF1BBD756A000F0C5E /* LaunchScreen.storyboard */,
 				528ADAFD1BBD756A000F0C5E /* Assets.xcassets */,
 				528ADB021BBD756A000F0C5E /* Info.plist */,
@@ -281,13 +286,39 @@
 			path = DecHexUITests;
 			sourceTree = "<group>";
 		};
+		52B45F231C0B1CD800C5B004 /* converterFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5292B7391BC1863100781A85 /* Dec2HexViewController.swift */,
+				528ADB281BBD7DF1000F0C5E /* Hex2DecViewController.swift */,
+				528ADB2C1BBD8459000F0C5E /* ConverterBrain.swift */,
+			);
+			name = converterFiles;
+			sourceTree = "<group>";
+		};
+		52B45F241C0B1D2C00C5B004 /* facebook */ = {
+			isa = PBXGroup;
+			children = (
+				5226CDC41C050C7300A5519A /* FacebookDataTableViewController.swift */,
+				5226CDBD1C04E4B000A5519A /* FacebookData.swift */,
+				523257B21C0494340074A9F3 /* FacebokAuthViewController.swift */,
+			);
+			name = facebook;
+			sourceTree = "<group>";
+		};
 		52B4AAAA1BF3DAD600C984E6 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				52F08D1D1C066D7E00661424 /* backgroundOne.jpg */,
-				52F08D211C06723800661424 /* backgroundFour.jpg */,
-				52F08D221C06723800661424 /* backgroundThree.jpg */,
-				52F08D271C06736C00661424 /* backgroundTwo.jpg */,
+				520BB4771C0B463400BFDE34 /* backgroundOne.JPG */,
+				52B45F2B1C0B274100C5B004 /* backgroundTwo.JPG */,
+				52B45F2A1C0B274100C5B004 /* backgroundThree.JPG */,
+				52B45F301C0B274700C5B004 /* backgroundFour.JPG */,
+				52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */,
+				52B45F291C0B274100C5B004 /* backgroundSix.JPG */,
+				52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */,
+				52F08D271C06736C00661424 /* backgroundTwo1.jpg */,
+				52F08D221C06723800661424 /* backgroundThree1.jpg */,
+				52F08D211C06723800661424 /* backgroundFour1.jpg */,
 				52B4AAAB1BF3DB2900C984E6 /* Icon-40@2x.png */,
 				52B4AAAD1BF3DB3C00C984E6 /* Icon-40@3x.png */,
 				52B4AAAF1BF3DB4000C984E6 /* Icon-60@2x.png */,
@@ -498,18 +529,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B45F2C1C0B274100C5B004 /* backgroundSix.JPG in Resources */,
 				528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */,
-				52F08D1E1C066D7E00661424 /* backgroundOne.jpg in Resources */,
+				52F08D1E1C066D7E00661424 /* backgroundOne1.jpg in Resources */,
 				52B4AAAC1BF3DB2900C984E6 /* Icon-40@2x.png in Resources */,
-				52F08D281C06736C00661424 /* backgroundTwo.jpg in Resources */,
-				52F08D241C06723800661424 /* backgroundFour.jpg in Resources */,
+				52B45F2E1C0B274100C5B004 /* backgroundTwo.JPG in Resources */,
+				52F08D281C06736C00661424 /* backgroundTwo1.jpg in Resources */,
+				52F08D241C06723800661424 /* backgroundFour1.jpg in Resources */,
 				528ADAFE1BBD756A000F0C5E /* Assets.xcassets in Resources */,
 				52B4AAB61BF3DB4A00C984E6 /* Icon-Small@3x.png in Resources */,
+				52B45F321C0B274700C5B004 /* backgroundFour.JPG in Resources */,
 				528ADAFC1BBD756A000F0C5E /* Main.storyboard in Resources */,
+				52B45F2D1C0B274100C5B004 /* backgroundThree.JPG in Resources */,
 				52B4AAB21BF3DB4400C984E6 /* Icon-60@3x.png in Resources */,
+				52B45F311C0B274700C5B004 /* backgroundFive.JPG in Resources */,
 				52B4AAB41BF3DB4700C984E6 /* Icon-Small@2x.png in Resources */,
 				52B4AAAE1BF3DB3C00C984E6 /* Icon-40@3x.png in Resources */,
-				52F08D251C06723800661424 /* backgroundThree.jpg in Resources */,
+				52F08D251C06723800661424 /* backgroundThree1.jpg in Resources */,
+				520BB4781C0B463400BFDE34 /* backgroundOne.JPG in Resources */,
 				52B4AAB01BF3DB4000C984E6 /* Icon-60@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,7 +634,6 @@
 				5226CDBE1C04E4B000A5519A /* FacebookData.swift in Sources */,
 				5226CDCC1C050E3200A5519A /* FbData+CoreDataProperties.swift in Sources */,
 				5226CDC51C050C7300A5519A /* FacebookDataTableViewController.swift in Sources */,
-				523257B51C04A0080074A9F3 /* HomePageViewController.swift in Sources */,
 				528ADAF71BBD756A000F0C5E /* AppDelegate.swift in Sources */,
 				523257B31C0494340074A9F3 /* FacebokAuthViewController.swift in Sources */,
 				52F3A7991C0A3660009CD967 /* MenuTableViewController.swift in Sources */,

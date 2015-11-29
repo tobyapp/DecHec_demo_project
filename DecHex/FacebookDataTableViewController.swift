@@ -2,9 +2,9 @@
 //  FacebookDataTableViewController.swift
 //  DecHex
 //
-//  Created by Toby Applegate on 24/11/2015.
 //  Copyright © 2015 Toby Applegate. All rights reserved.
 //
+//  A UITableViewController for the display of the 'liked pages' fomr a users Facebook profile, obtains the data from the CoreData object (FbData)
 
 import UIKit
 import CoreData
@@ -13,7 +13,7 @@ class FacebookDataTableViewController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
-    var pagesLikedData = [FbData]()
+    var pagesLikedData = [FbData]() //FbData - CoreData object
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,9 +55,9 @@ class FacebookDataTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("UITableViewCell", forIndexPath: indexPath) //as UITableViewCell
         let dataItem = pagesLikedData[indexPath.row]
         cell.textLabel!.text = dataItem.pageLiked!
-        let blueColor = (CGFloat(1) / CGFloat(indexPath.row)) * 5
-        let greenColor = CGFloat(1.0)
-        let redColor = CGFloat(1.0)
+        let redColor = (CGFloat(1) / CGFloat(indexPath.row)) * 6
+        let greenColor = CGFloat(0.6)
+        let blueColor = CGFloat(0.8)
         cell.backgroundColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)   //UIColor(red: 0.0, green: 0.5, blue: blueColor, alpha: 1.0)
         tableView.separatorColor = UIColor(red: redColor, green: greenColor, blue: blueColor, alpha: 1.0)
         
