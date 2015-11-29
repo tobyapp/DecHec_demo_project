@@ -14,8 +14,17 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     var facebookData = FacebookData()
 
+    
+//    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+//        if self.revealViewController() != nil {
+//            menuButton.target = self.revealViewController()
+//            menuButton.action = "revealToggle:"
+//            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+//        }
+        
         self.view.addBackground("backgroundFour.jpg")
         //load facebook display button
         func displayFBButton(){
@@ -33,7 +42,13 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
             displayFBButton()
             print("already logged in")
             facebookData.returnUserData()
-            self.performSegueWithIdentifier("moveToHomePage", sender: nil)
+            self.performSegueWithIdentifier("showPage", sender: nil)
+            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewControllerWithIdentifier("revealVC") 
+//            var rvc:SWRevealViewController = self.revealViewController() as SWRevealViewController
+//            rvc.pushFrontViewController(vc, animated: true)
+ 
         }
         else
         {
@@ -53,7 +68,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         print("User Logged In") //segue to new view
         facebookData.returnUserData()
-        self.performSegueWithIdentifier("moveToHomePage", sender: nil) //segue once logged into facebook
+        self.performSegueWithIdentifier("showPage", sender: nil) //segue once logged into facebook
         
         if ((error) != nil)
         {

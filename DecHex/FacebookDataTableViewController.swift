@@ -11,6 +11,7 @@ import CoreData
 
 class FacebookDataTableViewController: UITableViewController {
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var pagesLikedData = [FbData]()
 
@@ -18,6 +19,17 @@ class FacebookDataTableViewController: UITableViewController {
         super.viewDidLoad()
         //self.view.addBackground()
         fetchData()
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.revealViewController().rearViewRevealDisplacement = CGFloat(60)
+            self.revealViewController().frontViewShadowRadius = CGFloat(50)
+            self.revealViewController().frontViewShadowOffset = CGSizeMake(CGFloat(0), CGFloat(5))
+            self.revealViewController().frontViewShadowOpacity = CGFloat(1)
+            self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
+
+        }
         tableView.tableFooterView = UIView(frame:CGRectZero)
     }
 

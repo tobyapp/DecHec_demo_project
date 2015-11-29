@@ -12,18 +12,9 @@ class HomePageViewController: UIViewController {
 
     var facebookData = FacebookData()
     
+    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
-    @IBAction func backgorundChange(sender: UIPanGestureRecognizer) {
-        
-        let translation = sender.translationInView(self.view)
-        
-        print("Let X : \(translation.x)")
-        print("Let Y : \(translation.y)")
-        
-//        
-//        view.backgroundColor = UIColor(red: translation.x, green: translation.y, blue: 1, alpha: 1)
-    }
     
     
     override func viewDidLoad() {

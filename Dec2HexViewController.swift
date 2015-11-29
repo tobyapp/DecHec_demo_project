@@ -14,6 +14,9 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
     let dataSession = WCSession.defaultSession()
     var facebookData = FacebookData()
     
+    
+    
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var answerDisplay: UILabel!
     @IBOutlet weak var decInput: UITextField!
@@ -27,6 +30,11 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.revealViewController() != nil {
+            menuButton.target = self.revealViewController()
+            menuButton.action = "revealToggle:"
+            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
         self.view.addBackground("backgroundTwo.jpg")
         dataSession.delegate = self
         dataSession.activateSession() //ready to recieve messages from counterpart (may not be nessassery as not sending messages back)
