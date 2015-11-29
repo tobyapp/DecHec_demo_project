@@ -12,40 +12,37 @@ import WatchConnectivity
 
 class WatchInterfaceController: WKInterfaceController, WCSessionDelegate {
     
-    //define outlets
+    // dataSession - used to share data between app and watch app (singleton)
+    let dataSession = WCSession.defaultSession()
+    
+    // Define Outlets
     @IBOutlet var originalNumber: WKInterfaceLabel! //inputted by user
     @IBOutlet var decNumber: WKInterfaceLabel! //if converted original number to Dec
     @IBOutlet var hexNumber: WKInterfaceLabel! //if converted original number to Hex
-    
-    //returns singleton to be sued between devices
-    let dataSession = WCSession.defaultSession()
-    
-    //init interface controller with context data
+
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
+        // Activates the dataSession
         dataSession.delegate = self
-        dataSession.activateSession() //watch app ready to recieve messages fomr iphone app
+        dataSession.activateSession()
     }
     
-    //ismilar to viewdidload
     override func willActivate() {
         super.willActivate()
     }
     
+    // Function to recieve message from sendMessageToWatch() in the converters ViewControllers
     func session(session: WCSession, didReceiveMessage message: [String : AnyObject]) {
         
-        //get values from message dict and assign to constants
-        //message = dict of contents from message, as? = "number" might be nil but try to downcast to String type
+        // Corrisponding values to be displayed from the converters ViewControllers
         let origNumToBeDisplayed = message["originalNumber"] as? String
         let newDecNumber = message["newDecNumber"] as? String
         let newHexNumber = message["newHexNumber"] as? String
         
-        //set text of UIFields
-        hexNumber.setText("Hex: \(newHexNumber!)") //set text of hexNumber to new converted number enterd form iphone app
-        decNumber.setText("Dec: \(newDecNumber!)")//set text of decNumber to new converted number enterd form iphone app
+        hexNumber.setText("Hex: \(newHexNumber!)")
+        decNumber.setText("Dec: \(newDecNumber!)")
         originalNumber.setText("Input: \(origNumToBeDisplayed!)")
     }
 
 }
-

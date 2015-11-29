@@ -12,10 +12,11 @@ import CoreData
 
 class FacebookData {
     
+    // managedObjectContext - Managed object to work with objects (Facebook data) in CoreData
     let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
 
-    func returnUserData()
-    {
+    // Function to acquire and store various data from Facebook user's profile using CoreData
+    func returnUserData() {
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "name, email, friends, likes, picture.type(large)"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
@@ -25,9 +26,11 @@ class FacebookData {
             }
             else
             {
+                // Parses data using SwiftyJSON
                 let json = JSON(result)
                 let moc = self.managedObjectContext
-                //Populate core data with fb pages liked
+                
+                // Populate CoreData with Facebook pages liked
                 for (_, subJson) in json["likes"]["data"] {
                     if let pageLikedName = subJson["name"].string {
                         if let pageLikedDate = subJson["created_time"].string {
@@ -39,9 +42,11 @@ class FacebookData {
         })
     }
     
-    func getProfilePicture(completion: (pictureData: NSData?, error: NSError?) -> Void){
+    // Function to obtain users Facebook profile picture
+    func getProfilePicture(completion: (pictureData: NSData?, error: NSError?) -> Void) {
         
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"picture.type(large)"])
+        
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
             
             var pictureData: NSData?
@@ -51,31 +56,40 @@ class FacebookData {
                 return
             }
             
+            // Parses data using SwiftyJSON
             let json = JSON(result)
             let profilePicture = json["picture"]["data"]["url"].stringValue
             
+            // Assigns users profile picture to varibale to be returned
             if let url = NSURL(string: profilePicture) {
                 pictureData = NSData(contentsOfURL: url)
             }
+            
+            // Use completion handler to return variables on completion
             completion(pictureData: pictureData, error: error)
         })
     }
     
-    func getUserName(completion: (nameData: String?, error: NSError?) -> Void){
+    // Function to obtain users name form Facebook profile
+    func getUserName(completion: (nameData: String?, error: NSError?) -> Void) {
         
         let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"name"])
         graphRequest.startWithCompletionHandler({ (connection, result, error) -> Void in
 
             if error != nil {
                 print("login error: \(error!.localizedDescription)")
+                
+                // Return username to be an error if can not obtain username from Facebook
                 let userName = "Error, need to log in"
                 completion(nameData: userName, error: error)
                 return
             }
             
+            // Parses data using SwiftyJSON
             let json = JSON(result)
             let userName = json["name"].stringValue
             
+            // Use completion handler to return variables on completion
             completion(nameData: userName, error: error)
         })
     }

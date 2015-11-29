@@ -37,11 +37,7 @@
 		52B45F2E1C0B274100C5B004 /* backgroundTwo.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F2B1C0B274100C5B004 /* backgroundTwo.JPG */; };
 		52B45F311C0B274700C5B004 /* backgroundFive.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */; };
 		52B45F321C0B274700C5B004 /* backgroundFour.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 52B45F301C0B274700C5B004 /* backgroundFour.JPG */; };
-		52F08D1E1C066D7E00661424 /* backgroundOne1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */; };
 		52F08D201C066E6200661424 /* ClassExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F08D1F1C066E6200661424 /* ClassExtentions.swift */; };
-		52F08D241C06723800661424 /* backgroundFour1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D211C06723800661424 /* backgroundFour1.jpg */; };
-		52F08D251C06723800661424 /* backgroundThree1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D221C06723800661424 /* backgroundThree1.jpg */; };
-		52F08D281C06736C00661424 /* backgroundTwo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 52F08D271C06736C00661424 /* backgroundTwo1.jpg */; };
 		52F3A7991C0A3660009CD967 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A7981C0A3660009CD967 /* MenuTableViewController.swift */; };
 		52F3A79C1C0A3854009CD967 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F3A79B1C0A3854009CD967 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
@@ -142,11 +138,7 @@
 		52B45F2B1C0B274100C5B004 /* backgroundTwo.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo.JPG; sourceTree = "<group>"; };
 		52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFive.JPG; sourceTree = "<group>"; };
 		52B45F301C0B274700C5B004 /* backgroundFour.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour.JPG; sourceTree = "<group>"; };
-		52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundOne1.jpg; sourceTree = "<group>"; };
 		52F08D1F1C066E6200661424 /* ClassExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassExtentions.swift; sourceTree = "<group>"; };
-		52F08D211C06723800661424 /* backgroundFour1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundFour1.jpg; sourceTree = "<group>"; };
-		52F08D221C06723800661424 /* backgroundThree1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundThree1.jpg; sourceTree = "<group>"; };
-		52F08D271C06736C00661424 /* backgroundTwo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = backgroundTwo1.jpg; sourceTree = "<group>"; };
 		52F3A7981C0A3660009CD967 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		52F3A79B1C0A3854009CD967 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		BDAB4864E3EF58FCDD998B78 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -303,10 +295,6 @@
 				52B45F301C0B274700C5B004 /* backgroundFour.JPG */,
 				52B45F2F1C0B274700C5B004 /* backgroundFive.JPG */,
 				52B45F291C0B274100C5B004 /* backgroundSix.JPG */,
-				52F08D1D1C066D7E00661424 /* backgroundOne1.jpg */,
-				52F08D271C06736C00661424 /* backgroundTwo1.jpg */,
-				52F08D221C06723800661424 /* backgroundThree1.jpg */,
-				52F08D211C06723800661424 /* backgroundFour1.jpg */,
 			);
 			name = images;
 			path = DecHex;
@@ -513,16 +501,12 @@
 			files = (
 				52B45F2C1C0B274100C5B004 /* backgroundSix.JPG in Resources */,
 				528ADB011BBD756A000F0C5E /* LaunchScreen.storyboard in Resources */,
-				52F08D1E1C066D7E00661424 /* backgroundOne1.jpg in Resources */,
 				52B45F2E1C0B274100C5B004 /* backgroundTwo.JPG in Resources */,
-				52F08D281C06736C00661424 /* backgroundTwo1.jpg in Resources */,
-				52F08D241C06723800661424 /* backgroundFour1.jpg in Resources */,
 				528ADAFE1BBD756A000F0C5E /* Assets.xcassets in Resources */,
 				52B45F321C0B274700C5B004 /* backgroundFour.JPG in Resources */,
 				528ADAFC1BBD756A000F0C5E /* Main.storyboard in Resources */,
 				52B45F2D1C0B274100C5B004 /* backgroundThree.JPG in Resources */,
 				52B45F311C0B274700C5B004 /* backgroundFive.JPG in Resources */,
-				52F08D251C06723800661424 /* backgroundThree1.jpg in Resources */,
 				520BB4781C0B463400BFDE34 /* backgroundOne.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

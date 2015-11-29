@@ -10,14 +10,14 @@ import Foundation
 
 class ConverterBrain {
     
+    // Function to convert hexadecimal to decimal
     func hexToDec(hexNumber : String) -> (result: Int?, errorMessage: String?) {
-        
         var power = 0
         var total = 0
         let hexString = Array(hexNumber.characters.reverse())
         
-        //converts hexidecimal numbers A/a - F/f to the corrisponding decimal numbers
-        //if anythign other then A-F entered then throw error and print to screen
+        //converts hexadecimal numbers A/a - F/f to the corresponding decimal numbers
+        //if anything other then A-F entered then throw error and print to screen
         for number in hexString {
             var numberString = String(number)
             switch numberString {
@@ -46,8 +46,9 @@ class ConverterBrain {
         return(total, nil)
     }
     
+    // Function to convert decimal to hexadecimal
     func decToHex(decNumberInput : String) -> String {
-        //see if parameter can be converted to Int, if not return ERROR message
+        //see if input from user can be converted to Int, if not return ERROR message
         if let decNumber = Int(decNumberInput) {
             var remainderInHex = decNumber
             var devisionCounter = decNumber
@@ -55,7 +56,7 @@ class ConverterBrain {
                 while devisionCounter != 0 {
                     remainderInHex = devisionCounter % 16
                     devisionCounter = devisionCounter / 16
-                    //convert remainder of sum from dec (10-15) to hex equivilants (A-F)
+                    //convert remainder of sum from dec (10-15) to hex equivalents (A-F)
                     switch remainderInHex {
                     case 10:
                         stringOfhex = stringOfhex + "A"

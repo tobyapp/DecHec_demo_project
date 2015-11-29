@@ -12,21 +12,31 @@ import SwiftyJSON
 
 class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
     
+    // facebookData - used to retrieve data form users FB profile + add data to CoreData object
     var facebookData = FacebookData()
-
+    
+    // Define Outlets
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Used to display side menu (using SWRevealViewController)
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            self.revealViewController().rearViewRevealWidth = CGFloat(200)
+            self.revealViewController().frontViewShadowRadius = CGFloat(50)
+            self.revealViewController().frontViewShadowOffset = CGSizeMake(CGFloat(0), CGFloat(5))
+            self.revealViewController().frontViewShadowOpacity = CGFloat(1)
+            self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
         }
-        
+        // Sets views background
         self.view.addBackground("backgroundFour.jpg")
-        //load facebook display button
-        func displayFBButton(){
+        
+        // Function to load the Facebook login/logout button
+        func displayFBButton() {
             let loginView : FBSDKLoginButton = FBSDKLoginButton()
             self.view.addSubview(loginView)
             loginView.center = self.view.center
@@ -37,19 +47,16 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         if (FBSDKAccessToken.currentAccessToken() != nil)
         {
-            // already logged in, display button and perform segue to different view controller
+            // User is already logged in, display logout button
             displayFBButton()
-            print("already logged in")
             facebookData.returnUserData()
-//            self.performSegueWithIdentifier("showPage", sender: nil)
- 
+            
+            // self.performSegueWithIdentifier("showProfilePage", sender: nil) - was used to perform segue, keeping it for refference
         }
         else
         {
-            //not logged in yet, present button for user to log in
+            // User isn't logged in, sdisplay login button
             displayFBButton()
-            print("logging in")
-            
         }
     }
     
@@ -57,12 +64,10 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.didReceiveMemoryWarning()
     }
     
-    // Facebook Delegate Methods
+    // Facebook delegate method, check if user logged in successfully
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
-        print("User Logged In") //segue to new view
-        facebookData.returnUserData()
-//        self.performSegueWithIdentifier("showPage", sender: nil) //segue once logged into facebook
+        // self.performSegueWithIdentifier("showProfilePage", sender: nil) - was used to perform segue, keeping it for refference
         
         if ((error) != nil)
         {
@@ -70,7 +75,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
             
         else if result.isCancelled {
-            // user cancelled to log in, stay at same page
+            // User cancelled to log in, stay at same page
             print("cancelled")
         }
         else {
@@ -78,6 +83,7 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         }
     }
     
+    // Function to handle what happens when a user logs out
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!) {
         print("User Logged Out")
     }
