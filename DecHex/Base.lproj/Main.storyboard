@@ -412,19 +412,6 @@
                                     <rect key="frame" x="58" y="243" width="685" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-kj-c0r">
-                                <rect key="frame" x="270" y="322" width="59" height="62"/>
-                                <animations/>
-                                <state key="normal" title="Convert!">
-                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="370" y="322" width="59" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="convert:" destination="xva-yL-Zn6" eventType="touchUpInside" id="yhu-13-xTl"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjx-3g-WsH">
                                 <rect key="frame" x="272" y="172" width="57" height="21"/>
                                 <animations/>
@@ -495,6 +482,19 @@
                                     </mask>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEB-kj-c0r">
+                                <rect key="frame" x="270" y="322" width="59" height="62"/>
+                                <animations/>
+                                <state key="normal" title="Convert!">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=compact-widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="370" y="322" width="59" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="convert:" destination="xva-yL-Zn6" eventType="touchUpInside" id="yhu-13-xTl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import WatchConnectivity
+import MK
 
 class Dec2HexViewController: UIViewController, WCSessionDelegate {
     
@@ -29,11 +30,25 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
         convertDecToHex(decInput.text!)
     }
     @IBAction func warningmessage(sender: AnyObject) {
-        showAlertController()
+        //showAlertController()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Used to display a custom UIButton to replace the IBAction convert button in storyboard, need to fix auto layout
+        let convertButton = RaisedButton(frame: CGRectMake(135, 350, 100, 25))
+        convertButton.setTitle("Convert", forState: .Normal)
+        convertButton.titleLabel!.font = UIFont(name: "System", size: 15)
+        convertButton.addTarget(self, action: "convert2:", forControlEvents: UIControlEvents.TouchUpInside)
+        view.addSubview(convertButton)
+        
+        // Used to display a custom UIButton to replace the Test alert Controller button in storyboard, need to fix auto layout
+        let warningButton = RaisedButton(frame: CGRectMake(84, 465, 200, 25))
+        warningButton.setTitle("Test Alert Controller", forState: .Normal)
+        warningButton.titleLabel!.font = UIFont(name: "System", size: 15)
+        warningButton.addTarget(self, action: "showAlertController:", forControlEvents: UIControlEvents.TouchUpInside)
+        view.addSubview(warningButton)
         
         // Used to display side menu (using SWRevealViewController)
         if self.revealViewController() != nil {
@@ -67,6 +82,12 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    // Converts the inputted decimal number to hexadecimal
+    func convert2(sender: UIButton!) {
+        convertDecToHex(decInput.text!)
+    }
+
     
     // Converts the inputted decimal number to hexadecimal
     func convertDecToHex(decInputFromUI : String) {
@@ -104,7 +125,7 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
     }
     
     // Function to display an Alert Controller (for test purposes)
-    func showAlertController() {
+    func showAlertController(sender: UIButton!) {
         let alertController = UIAlertController(
             title: "test title, hey they both start with a 'T'",
             message: "shouldnt have pressed this button...",

@@ -12,6 +12,12 @@ class ConverterBrain {
     
     // Function to convert hexadecimal to decimal
     func hexToDec(hexNumber : String) -> (result: Int?, errorMessage: String?) {
+        
+        // Checks to see if input is empty
+        if hexNumber == "" {
+            return(nil, "ERROR")
+        }
+        
         var power = 0
         var total = 0
         let hexString = Array(hexNumber.characters.reverse())
@@ -76,7 +82,6 @@ class ConverterBrain {
                 }
             //reverse string and return
             let stringOfhexReversed = stringOfhex.characters.reverse()
-            print(String(stringOfhexReversed))
             return(String(stringOfhexReversed))
         }
         else {

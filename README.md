@@ -9,6 +9,7 @@ The purpose of this demo project is to test and use different iOS functionality,
 - CocoaPods
 - Class Extensions
 - AlertControllers
+- MK library
 - Plus various other UI elements
 
 ## Usage:
@@ -22,7 +23,7 @@ This Application connects to Facebook (using separate supplied credentials) thro
 5. FBSDK share button: A Facebook share button was going to be displayed once a user converted a number using one of the two applications conversion tools which when pressed, would have a Share Dialog pop up (similar to an alert controller) which would share a message such as ‘I just converted XXX to YYY using ZZZ app! Here’s the Github link!’ but this functionality in the FBSDKShareKit was not working
 6. Graphing function: A view controller displaying a graph showing the dates of the users liked Facebook page’s will be added to show the amount of pages liked over time which will include user interaction to allow the user to select a point in the graph to display the liked page name
 7. Apple Push Certificates: An Apple Push Certificate will be obtained to allow Apple Push Notifications
-8. Implement CosmicMinds (https://github.com/CosmicMind/MaterialKit) for enhanced looking UI buttons
+8. Programmatically apply auto layout in Dec2HexViewController.swift and Hex2DecViewController.swift files for buttons of RaisedButton classes
 
 ### Warnings:
 - Various warning messages with regards to used frameworks: Solutions for these were researched but could not be found, these will be looked at and fixed in the future
