@@ -14,7 +14,7 @@ class ConverterBrain {
     func hexToDec(hexNumber : String) -> (result: Int?, errorMessage: String?) {
         
         // Checks to see if input is empty
-        if hexNumber == "" {
+        if hexNumber.isEmpty {
             return(nil, "ERROR")
         }
         
