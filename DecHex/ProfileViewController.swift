@@ -21,18 +21,11 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Used to display side menu (using SWRevealViewController)
+        // Sets views background
         self.view.addBackground("backgroundOne.jpg")
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.revealViewController().rearViewRevealWidth = CGFloat(200)
-            self.revealViewController().frontViewShadowRadius = CGFloat(50)
-            self.revealViewController().frontViewShadowOffset = CGSizeMake(CGFloat(0), CGFloat(5))
-            self.revealViewController().frontViewShadowOpacity = CGFloat(1)
-            self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
-        }
+        
+        // Used to display side menu (using SWRevealViewController)
+        addSideMenu(menuButton)
         
         // Obtain users Facebook profile picture and set to UIImageView
         facebookData.getProfilePicture {(pictureData, error) -> Void in

@@ -22,16 +22,8 @@ class FacebokAuthViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         // Used to display side menu (using SWRevealViewController)
-        if self.revealViewController() != nil {
-            menuButton.target = self.revealViewController()
-            menuButton.action = "revealToggle:"
-            self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            self.revealViewController().rearViewRevealWidth = CGFloat(200)
-            self.revealViewController().frontViewShadowRadius = CGFloat(50)
-            self.revealViewController().frontViewShadowOffset = CGSizeMake(CGFloat(0), CGFloat(5))
-            self.revealViewController().frontViewShadowOpacity = CGFloat(1)
-            self.revealViewController().frontViewShadowColor = UIColor.darkGrayColor()
-        }
+        addSideMenu(menuButton)
+        
         // Sets views background
         self.view.addBackground("backgroundFour.jpg")
         
