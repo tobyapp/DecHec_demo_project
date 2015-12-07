@@ -35,8 +35,10 @@ extension NSLayoutConstraint {
     }
 }
 
+// Add side menu to view controllers
 extension UIViewController {
     
+    // Adds side menu to view controllers 
     func addSideMenu(menuButton : UIBarButtonItem!) {
         if self.revealViewController() != nil {
             menuButton.target = self.revealViewController()

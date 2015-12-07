@@ -25,14 +25,6 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
     @IBOutlet weak var hexInput: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
-    // Define Actions
-    @IBAction func convertButton(sender: UIButton) {
-        convert(hexInput.text!)
-    }
-    @IBAction func warningMessage(sender: AnyObject) {
-        //showAlertController()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,7 +32,7 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
         let convertButton = RaisedButton(frame: CGRectMake(135, 345, 100, 25))
         convertButton.setTitle("Convert", forState: .Normal)
         convertButton.titleLabel!.font = UIFont(name: "System", size: 15)
-        convertButton.addTarget(self, action: "convert2:", forControlEvents: UIControlEvents.TouchUpInside)
+        convertButton.addTarget(self, action: "convert:", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(convertButton)
         
         // Used to display a custom UIButton to replace the Test alert Controller button in storyboard, need to fix auto layout
@@ -76,12 +68,12 @@ class Hex2DecViewController: UIViewController, WCSessionDelegate{
     }
     
     // Converts the inputted hexadecimal number to decimal 
-    func convert2(sender: UIButton!) {
-        convert(hexInput.text!)
+    func convert(sender: UIButton!) {
+        convertHexToDec(hexInput.text!)
     }
     
     // Converts the inputted hexadecimal number to decimal 
-    func convert(input : String) {
+    func convertHexToDec(input : String) {
         let convertedNumber = brain.hexToDec(input)
         if let answer = convertedNumber.result {
             let stringOfAnswer = String(answer)

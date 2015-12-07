@@ -93,7 +93,6 @@ class FacebookDataTableViewController: UITableViewController {
             pagesLikedData = fetchResults
         }   catch let error as NSError {
             print("Fetch failed: \(error.localizedDescription)")
-        }
+            }
     }
-    
 }
