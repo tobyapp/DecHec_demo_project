@@ -42,6 +42,9 @@ class Dec2HexViewController: UIViewController, WCSessionDelegate {
         warningButton.addTarget(self, action: "showAlertController:", forControlEvents: UIControlEvents.TouchUpInside)
         view.addSubview(warningButton)
         
+        // attirbute .Leading form leading edge (where button starts, on the left I think)
+//        NSLayoutConstraint(item: convertButton, attribute: .Leading, relatedBy: <#T##NSLayoutRelation#>, toItem: <#T##AnyObject?#>, attribute: <#T##NSLayoutAttribute#>, multiplier: <#T##CGFloat#>, constant: <#T##CGFloat#>)
+        
         // Used to display side menu (using SWRevealViewController)
         self.addSideMenu(menuButton)
         

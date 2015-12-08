@@ -55,37 +55,36 @@ class ConverterBrain {
     // Function to convert decimal to hexadecimal
     func decToHex(decNumberInput : String) -> String {
         //see if input from user can be converted to Int, if not return ERROR message
-        if let decNumber = Int(decNumberInput) {
-            var remainderInHex = decNumber
-            var devisionCounter = decNumber
-            var stringOfhex = ""
-                while devisionCounter != 0 {
-                    remainderInHex = devisionCounter % 16
-                    devisionCounter = devisionCounter / 16
-                    //convert remainder of sum from dec (10-15) to hex equivalents (A-F)
-                    switch remainderInHex {
-                    case 10:
-                        stringOfhex = stringOfhex + "A"
-                    case 11:
-                        stringOfhex = stringOfhex + "B"
-                    case 12:
-                        stringOfhex = stringOfhex + "C"
-                    case 13:
-                        stringOfhex = stringOfhex + "D"
-                    case 14:
-                        stringOfhex = stringOfhex + "E"
-                    case 15:
-                        stringOfhex = stringOfhex + "F"
-                    default:
-                        stringOfhex = stringOfhex + String(remainderInHex)
-                    }
-                }
-            //reverse string and return
-            let stringOfhexReversed = stringOfhex.characters.reverse()
-            return(String(stringOfhexReversed))
-        }
-        else {
+        guard let decNumber = Int(decNumberInput) else {
             return("ERROR")
         }
+        
+        var remainderInHex = decNumber
+        var devisionCounter = decNumber
+        var stringOfhex = ""
+        while devisionCounter != 0 {
+            remainderInHex = devisionCounter % 16
+            devisionCounter = devisionCounter / 16
+            //convert remainder of sum from dec (10-15) to hex equivalents (A-F)
+            switch remainderInHex {
+                case 10:
+                    stringOfhex = stringOfhex + "A"
+                case 11:
+                    stringOfhex = stringOfhex + "B"
+                case 12:
+                    stringOfhex = stringOfhex + "C"
+                case 13:
+                    stringOfhex = stringOfhex + "D"
+                case 14:
+                    stringOfhex = stringOfhex + "E"
+                case 15:
+                    stringOfhex = stringOfhex + "F"
+                default:
+                    stringOfhex = stringOfhex + String(remainderInHex)
+            }
+        }
+        //reverse string and return
+        let stringOfhexReversed = stringOfhex.characters.reverse()
+        return(String(stringOfhexReversed))
     }
 }

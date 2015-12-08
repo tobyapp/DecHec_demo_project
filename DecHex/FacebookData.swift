@@ -32,11 +32,15 @@ class FacebookData {
                 
                 // Populate CoreData with Facebook pages liked
                 for (_, subJson) in json["likes"]["data"] {
-                    if let pageLikedName = subJson["name"].string {
-                        if let pageLikedDate = subJson["created_time"].string {
-                            FbData.createInManagedObjectContext(moc, likeDate: pageLikedDate, pageLiked: pageLikedName)
-                        }
+                    guard let pageLikedName = subJson["name"].string else {
+                        print("Error in getting page liekd name")
+                        return
                     }
+                    guard let pageLikedDate = subJson["created_time"].string else {
+                        print("Error in getting page liekd date")
+                        return
+                    }
+                    FbData.createInManagedObjectContext(moc, likeDate: pageLikedDate, pageLiked: pageLikedName)
                 }
             }
         })
